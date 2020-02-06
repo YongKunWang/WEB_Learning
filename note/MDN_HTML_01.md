@@ -8,8 +8,8 @@
   * [HTML基础](#HTML基础)
     + [元素讲解](#元素讲解)
     + [块级元素和内联元素](#块级元素和内联元素)
-      - [块级元素（block）](#块级元素（block）)
-      - [内联元素（inline）](#内联元素（inline）)
+      - [块级元素[block]](#块级元素[block])
+      - [内联元素[inline]](#内联元素[inline])
     + [空元素（void/empty Element）](#空元素（void/empty Element）)
   * [HTML页面讲解](#HTML页面讲解)
     + [元数据 meta 元素](#元数据 meta 元素)
@@ -57,7 +57,7 @@
 文件夹结构：
 
 ```html
-index.html ：主页
+site文件夹  ：主页
 image文件夹 ：网页图像数据
 styles文件夹 ：网页样式表
 scripts文件夹 ：网页交互功能的JavaScript文件
@@ -96,16 +96,20 @@ JavaScript用来描述一个网页的功能或者行为
 
 ![](../media/01_入门元素属性讲解.png)
 
+**元素属性值和多个元素属性写法的区别**
+
+
+
 ### 块级元素和内联元素
 
-#### 块级元素（block）
+#### 块级元素[block]
 
 块级元素在页面中以块的形式展现：
 
 - 相对于前面的内容，他会出现在新的一行；
 - 其后的内容也会出现在新的一行
 
-#### 内联元素（inline）
+#### 内联元素[inline]
 
 通常出现在块状元素中，并且环绕内容的一小部分。
 
@@ -153,14 +157,18 @@ JavaScript用来描述一个网页的功能或者行为
 
 许多`<meta>`元素还包含了`name`和`content`这两个特性：
 
-- `name`指定了`meta`的乐行，说明了该元素包含了什么类型的信息
+- `name`指定了`meta`的名称，说明了该元素包含了什么类型的信息
 - `content`指定了实际的元数据内容
 
 ```html
 <meta name="author" content="wyk"
 ```
 
-**`meta`的`description` 类型信息，也被使用在搜索引擎显示的结果页面中。**
+**`meta`的`description` 类型信息，也被使用在搜索引擎显示的结果页面中**。
+
+![](../media/04_description在搜索引擎的作用1.png)
+
+![](../media/03_description在搜索引擎的作用.png)
 
 ## 标记文本
 
