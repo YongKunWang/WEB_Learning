@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS作用规则</title>
+	<style>
+		body {
+			font-size: 62.5%;
+		}
+		.special {
+			color: blue;
+		}
+		p {
+			color: red;
+		}
+		.pxclass {
+			width: 100px;
+			border: 1px solid black;
+		}
+		.emclass {
+			width: 10em;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>CSS作用规则</h1>
+	<!-- 显示红色，后面的样式覆盖前面的样式 -->
+	<p class="blue">What Color is I</p>
+
+	<p class="pxclass">px，em演示</p>
+	<p class="emclass">px，em演示</p>
+</body>
+
+</html>

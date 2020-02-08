@@ -1,0 +1,55 @@
+h1 {
+	color: red;
+}
+
+/*使用逗号分隔符可使用多个选择器*/
+p, li {
+	color: green;
+}
+/*改变元素的默认行为*/
+li {
+	/*list-style-type: none;*/
+	list-style-type:square;
+}
+/*类选择器使用点来选择*/
+.special {
+	color: orange;
+	font-weight: blod;
+}
+/*选中special类的li元素*/
+li.special {
+	color: red;
+	font-weight: bold;
+}
+
+/*根据元素在文档中的位置来确定*/
+em {
+	color: rebeccapurple;
+}
+/*只有li嵌套的em元素变色*/
+li em {
+	color: red;
+}
+/*相邻兄弟组合器：只装饰h1后面的p标签，且两者具有相同的父标签*/
+h1 + p {
+	font-size: 200%;
+}
+
+/*未访问*/
+a:link {
+	color:pink;
+}
+/*已访问过*/
+a:visited {
+	color: purple;
+}
+
+/*鼠标悬停*/
+a:hover {
+	text-decoration: none;
+}
+/*点击时*/
+a:active {
+	color: red;
+}
+
