@@ -20,6 +20,15 @@ property: value;
 
 ## CSS选择器基础
 
+1. 类选择器
+2. id选择器
+3. 多类选择器 （空格隔开）
+4. 通配符选择器
+5. 交集选择器 
+6. 并集选择器 (逗号)
+7. 后代选择器 （包含选择器 使用空格隔开）
+8. 子元素选择器 （父元素 > 子元素）
+
 ```css
 /*选择器实例*/
 h1 {
@@ -97,7 +106,7 @@ a:active {
 
 - 内部样式表
 
-- 在`<head></head>`中引入`<style></style>`
+  - 在`<head></head>`中引入`<style></style>`
 
   ```css
   <!DOCTYPE html>
@@ -257,6 +266,12 @@ a:active {
 5. `border`: `border-width border-style border-color`
 
 ### 函数
+
+大多数属性的值都是相对简单的关键字或者值；但是也有一些可能的值以函数的形式出现
+
+```html
+
+```
 
 
 

@@ -1,0 +1,102 @@
+body {
+	font-size: 62.5%;
+}
+.outer {
+	margin: 0 auto;
+	border:5px solid black;
+	width: 400px;
+	height: 40px;
+	background-color: red;
+}
+.inner {
+	background-color: purple;
+	width: calc(90% - 30px);
+	line-height: 40px;
+	color: white;
+}
+.rect {
+	margin: 30px auto;
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	transform: rotate(0.8turn);
+}
+.G {
+	color: #4285F4;
+	font-size: 8em;
+	font-weight: 500;
+}
+.o {
+	color: #EA4335;
+	font-size: 6em;
+	font-weight: 500;
+}
+.o2 {
+	color: #FBBC05;
+	font-size: 6em;
+	font-weight: 500;
+}
+.g {
+	color: #4285F4;
+	font-size: 6em;
+	font-weight: 500;
+}
+.l {
+	color: #34A853;
+	font-size: 6em;
+	font-weight: 500;
+}
+.e {
+	color: #EA4335;
+	font-size: 6em;
+	font-weight: 500;
+}
+/*后代选择器*/
+.site-r a {
+	color: red;
+}
+.nav a {
+	color: orange;
+}
+.nav .sitenav {
+	font: 14px "微软雅黑"
+}
+
+.nav > ul > li > a {
+	color: green;
+}
+
+.ketang2div {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid green;
+}
+.ketang2span {
+	width: 150px;
+	height: 150px;
+	background-color: green;
+	display: block;
+	border: 1px solid red;
+}
+
+.ketang2diva {
+	width: 80px;
+	height: 20px;
+	background-color: blue;
+	line-height: 20px;
+	text-align: center;
+	display: inline-block;
+
+}
+.tetang2a {
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	color: white;
+	background-color: blue;
+}
+.tetang2a:hover {
+	background-color: orange;
+}
