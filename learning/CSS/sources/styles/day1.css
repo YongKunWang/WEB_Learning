@@ -1,0 +1,146 @@
+body {
+	font-size: 62.5%;
+}
+/*案例一实现*/
+.ex1>.ex1-G {
+	font-size: 8em;
+	font-weight: 500;
+	color: #4285F4;
+}
+.ex1 .ex1-o {
+	font-size: 5em;
+	font-weight: 500;
+	color: #EA4335;
+}
+.ex1 .ex1-o2 {
+	font-size: 5em;
+	font-weight: 500;
+	color: #FBBC05;
+}
+.ex1 .ex1-g {
+	font-size: 5em;
+	font-weight: 500;
+	color: #4285F4;
+}
+.ex1 .ex1-l {
+	font-size: 5em;
+	font-weight: 500;
+	color: #34A853;
+}
+.ex1 .ex1-e {
+	font-size: 5em;
+	font-weight: 500;
+	color: #EA4335;
+}
+
+
+/*案例2实现*/
+.sitenav .site-r a {
+	color: red;
+}
+/*后代选择器*/
+.nav ul li a {
+	color: orange;
+}
+/*并集选择器*/
+.nav, .sitenav {
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+/*子代选择器*/
+.nav>ul>li>a { 
+	color: green;
+}
+
+/*案例3*/
+.ex3 div {
+	border: 1px solid green;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+.ex3 span {
+	border: 1px solid red;
+	width: 150px;
+	height: 150px;
+	background-color: green;
+	display: block;
+}
+
+.ex3 a {
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	background-color: blue;
+	color: white;
+	text-align: center;
+	display: inline-block;
+}
+
+.ex3 a:hover {
+	background-color: orange;
+}
+/*案例4*/
+.ex4 a {
+	width: 120px;
+	height: 50px;
+	color: white;
+	font-size: 2em;
+	background-image: url(../images/bg.png);
+	text-align: center;
+	text-decoration: none;
+	line-height: 50px;
+	display: inline-block;
+}
+.ex4 a:hover {
+	background-image: url(../images/bgc.png);
+}
+
+/*案例5*/
+.ex5 {
+	border: 1px solid red;
+	width: 150px;
+	height: 150px;
+	background-color: purple;
+	background-image: url(../images/bgc.png);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.ex5-table {
+	border: 1px solid red;
+	border-collapse: collapse;
+
+}
+
+/*案例6 新浪导航*/
+.ex6 .nav {
+	border-top: 3px solid #FF8500;
+	border-bottom: 1px solid #EDEEF0;
+	background-color: #FCFCFC;
+	width: 100%;
+	height: 50px;
+	
+}
+
+.ex6 .nav a {
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	color: #4C4C4C;
+	text-align: center;
+	text-decoration: none;
+	padding: 0 14px;
+}
+.ex6 .nav a:hover {
+	background-color: #edeef0;
+	color: #ff8400;
+}
+/*案例7：水平居中*/
+.ex7 {
+	width: 150px;
+	height: 150px;
+	background-color: green;
+	margin: 0 auto;
+}
