@@ -1,0 +1,242 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.ex1 .mar1 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+	margin-bottom: 100px;
+	padding: 10px;
+}
+
+.ex1 .mar2 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	border: 1px solid orange;
+	margin-top: 50px;
+	padding: 10px;
+}
+
+.ex2 {
+	width: 180px;
+	height: 180px;
+	border: 1px solid black;
+	background-color: red;
+	padding: 20px;
+}
+
+.ex3 .big{
+	width: 180px;
+	height: 180px;
+	background-color: pink;
+	border: 10px solid red;
+	padding-left: 100px;
+	padding-top: 100px;
+}
+.ex3 .small {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+
+}
+
+.ex4 {
+	/*水平居中*/
+	margin: 0 auto;
+	width: 380px;
+	height: 265px;
+	border: 1px solid #CCCCCC;
+	background-color: #EEEEEE;
+	padding: 20px 15px 0 15px;
+}
+
+.ex4 h4 {
+	font-size: 20px;
+	color: #202026;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.ex4 li {
+	list-style: none;	
+}
+
+.ex4 a {
+	text-decoration: none;
+	color: #333333;
+	font-size: 12px;
+}
+.ex4 ul li {
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px dashed #cccccc;
+	text-indent: 2em;
+}
+.ex4 ul {
+	margin-top: 12px;
+}
+
+.ex4 a:hover {
+	text-decoration: underline;
+}
+
+.ex5 .extop {
+	width: 200px;
+	height: 200px;
+	margin-top: 100px;
+	background-color: red;
+	/*border: 1px dashed green;*/
+	/*padding-top: 1px;*/
+	/*overflow: hidden;*/
+}
+
+.ex5 .extop .exbottom {
+	width: 100px;
+	height: 100px;
+	margin-top: 50px;
+	background-color: green;
+}
+
+.ex7 {
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	border: 1px solid pink;
+	border-radius: 150px 0;
+	float: none;
+}
+
+.ex8 a {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	color: red;
+	text-align: center;
+	line-height: 200px;
+	background-color: green;
+	border-radius: 100%;
+	margin:30px;
+}
+
+.ex8 a:hover {
+	color: green;
+	background-color: red;
+}
+
+.ex9 {
+	width: 100%;
+	height: 400px;
+	border: 1px solid red;
+}
+.ex9 .top {
+	width: 100%;
+	height: 90px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	margin-bottom: 10px;
+	line-height: 90px;
+	text-align: center;
+
+}
+
+.ex9 .banner {
+	width: 100%;
+	height: 40px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	margin-bottom: 10px;
+	line-height: 40px;
+	text-align: center;
+
+}
+.ex9 .main {
+	width: 100%;
+	height: 190px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	margin-bottom: 10px;
+	line-height: 190px;
+	text-align: center;
+}
+.ex9 .footer {
+	width: 100%;
+	height: 40px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	line-height: 40px;
+	text-align: center;
+}
+
+.ex10 {
+	width: 100%;
+	height: 400px;
+	border: 1px solid red;
+}
+.ex10 .top {
+	width: 100%;
+	height: 90px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	margin-bottom: 10px;
+	line-height: 90px;
+	text-align: center;
+
+}
+
+.ex10 .banner {
+	width: 100%;
+	height: 40px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	margin-bottom: 10px;
+	line-height: 40px;
+	text-align: center;
+
+}
+.ex10 .main {
+	width: 100%;
+	height: 190px;
+	margin-bottom: 10px;
+	line-height: 190px;
+	text-align: center;
+}
+
+.ex10 .main .main-left {
+	width: 30%;
+	height: 190px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	float: left;
+} 
+.ex10 .main .main-div {
+	width: 4%;
+	height: 190px;
+	float: left;
+}
+.ex10 .main .main-right {
+	width: 65%;
+	height: 190px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	float: left;
+} 
+
+.ex10 .footer {
+	width: 100%;
+	height: 40px;
+	background-color: #EDECFA;
+	color: #C7C8C4;
+	border: 1px dashed #A3A3AF;
+	line-height: 40px;
+	text-align: center;
+}

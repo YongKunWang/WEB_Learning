@@ -1,0 +1,91 @@
+.ex1 .top {
+	width: 100%;
+	height: 100px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 100px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.ex1 .banner {
+	width: 100%;
+	height: 50px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.ex1 .main {
+	width: 100%;
+	height: 200px;
+	margin-bottom: 5px;
+}
+.ex1 .main .left {
+	width: 35%;
+	height: 200px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 200px;
+	text-align: center;
+	float: left;
+	margin-right: 5px;
+}
+
+.ex1 .main .right {
+	width: 63%;
+	height: 200px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 200px;
+	text-align: center;
+	float: right;
+}
+
+.ex1 .footer {
+	width: 100%;
+	height: 100px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 100px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.ex2 .top {
+	width: 100%;
+	height: 100px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 100px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.ex2 .banner {
+	width: 100%;
+	height: 50px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.ex2 .main .main-top div {
+	width: 23%;
+	height: 88px;
+	line-height: 88px;
+	background-color: #EDECFA;
+	color: #ADAE9F;
+	border: 1px dashed #AAA9B6;
+	margin-right: 10px;
+	float: left;
+}
+

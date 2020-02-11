@@ -205,19 +205,6 @@ rel：定义当前文档与被链接文档之间的关系，在这里需要指�
 
 
 ~~~html
-
-
-
-
-
-
-
-
-
-
-
-
-
 <head>
         <meta charset="utf-8">
         <style>
@@ -1499,6 +1486,7 @@ width和height的属性值可以为不同单位的数值或相对于父元素的
   /*内盒尺寸计算（元素实际大小）*/
   Element Height = content height + padding + border （Height为内容高度）
   Element Width = content width + padding + border （Width为内容宽度）
+
 ```
 
 注意：
@@ -1531,7 +1519,7 @@ width和height的属性值可以为不同单位的数值或相对于父元素的
 
 3. width   没有问题（嗨皮）我们经常使用宽度剩余法 高度剩余法来做。
 
-   ​
+   
 
 
 ## 圆角边框(CSS3)

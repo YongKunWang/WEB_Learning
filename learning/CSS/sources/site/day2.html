@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day2</title>
+	<link rel="stylesheet" href="../styles/day2.css">
+</head>
+<body>
+	<!-- 案例1 ：外边距合并 
+		合并后的外边距为两者中的较大值
+		值相等时会取其一
+		这种只能避免。。。。。。
+	-->
+	<div class="ex1">
+		<div class="mar1"></div>
+		<div class="mar2"></div>
+	</div>
+
+	<!-- 案例2：盒子的问题 -->
+	<div class="ex2"></div>
+	<br>
+	<!-- 案例3：盒子叠加 
+		大盒子嵌套小盒子在中间
+		大盒子大小为300*300
+		定位：从左从上
+	-->
+	<div class="ex3">
+		<div class="big">
+			<div class="small"></div>
+		</div>
+	</div>
+	<!-- 案例4：新闻列表 -->
+	<br>
+	<div class="ex4">
+		<!-- 属于内容的部分，需要padding进行内容挤压到指定的位置 -->
+		<h4>最新文章/New Articles</h4>
+		<ul>
+			<li><a href="#">北京招聘网页设计，平面设计，php/a></li>
+			<li><a href="#">体验javascript的魅力</a></li>
+			<li><a href="#">jquery世界来临</a></li>
+			<li><a href="#">网页设计师的梦想</a></li>
+			<li><a href="#">jquery中的链式编程是什么</a></li>
+		</ul>
+	</div>
+
+	<!-- 案例5：解决嵌套元素的外边距合并问题
+		三种方法，都是在父元素中添加！！！
+	 -->
+	<div class="ex5">
+		<div class="extop">
+			<div class="exbottom"></div>
+		</div>
+		
+	</div>
+	<br>
+	<!-- 案例7 圆角效果 -->
+	<div class="ex7"></div>
+	<br>
+	
+	<!-- 案例8： 圆角案例 -->
+	<div class="ex8">
+		<a href="#">文字内容</a>
+		<a href="#">文字内容</a>
+		<br>	
+		<a href="#">文字内容</a>
+		<a href="#">文字内容</a>
+	</div>
+
+	<!-- 案例9：一列固定且居中 -->
+	<div class="ex9">
+		<div class="top">top</div>
+		<div class="banner">banner</div>
+		<div class="main">main</div>
+		<div class="footer">footer</div>
+	</div>
+	<br>
+
+	<!-- 案例10：两列左窄右宽型 -->
+	<div class="ex10">
+		<div class="top">top</div>
+		<div class="banner">banner</div>
+		<div class="main">
+			<div class="main-left">left</div>
+			<div class="main-div"></div>
+			<div class="main-right">right</div>
+		</div>
+		<div class="footer">footer</div>
+	</div>
+</body>
+</html>
