@@ -287,8 +287,70 @@ box-shadow: 水平阴影（rquired） 垂直阴影(rquired) 模糊距离（虚�
 
 ## 浮动
 
+标准流会撑开盒子！！！！
+
+`float`
+
+我们引入浮动后，再进行有关浮动布局时，我们会定义一个父元素，且父元素给定宽度和高度，然后里面的子元素进行浮动布局。
+
+例子可见常规布局中的部分！！
+
 `float`
 
 ### 清除浮动
 
 准确的说不是清除浮动，而死清除浮动后造成的影响
+
+而现在我们又要清除浮动？
+
+在引入浮动概念进行布局的时候，使用父元素且给定宽和高是不适用的！！
+
+比如动态网页的显示的数据长短不一，这是使用父元素+浮动布局会很不好看的！！
+
+例子：
+
+```html
+<!-- 案例5：父元素不给宽高且浮动 -->
+	<!-- 
+		当未给父元素宽度和高度的时候，在标准流中，子元素会撑开父元素
+		但当子元素浮动之后，会脱标，此时会形成一条线！！
+	 -->
+	<div class="ex5">
+		<div class="father">
+			<div class="son1"></div>
+			<div class="son2"></div>
+		</div>
+	</div>
+```
+
+```css
+.ex5 .father{
+	border: 4px solid red;
+}
+
+.ex5 .father .son1 {
+	width: 300px;
+	height: 300px;
+	background-color: purple;
+	border: 1px solid green;
+	float: left;
+}
+
+.ex5 .father .son2 {
+	width: 300px;
+	height: 300px;
+	background-color: purple;
+	border: 1px solid green;
+	float: left;
+
+}
+```
+
+
+
+## 高度剩余法
+
+文字默认上对齐
+
+可以不通过调整`padding`和`margin`的值，而直接设置宽度来获得间距
+

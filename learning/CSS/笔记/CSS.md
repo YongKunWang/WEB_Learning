@@ -1702,7 +1702,7 @@ float      浮 漏 特
 
 ## 清除浮动本质
 
-清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0 的问题。
+清除浮动主要为了解决父级元素（未设置宽度和高度）因为子级浮动（标准流会撑开盒子，脱标后会使得父元素变成一条线）引起内部高度为0 的问题。
 
 <img src="media/n.jpg" />
 
@@ -1710,7 +1710,7 @@ float      浮 漏 特
 
 <img src="media/kc.jpg" />
 
-## 清除浮动的方法
+## 清除浮动的方法4种
 
 其实本质叫做闭合浮动更好一些, 记住，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让他们出来影响其他元素。
 
@@ -1754,7 +1754,7 @@ float      浮 漏 特
 使用方法：
 
 ```css
- .clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+ .clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   /*正常浏览器*/
 
  .clearfix {*zoom: 1;}   /* IE6、7 专有 */
 ```

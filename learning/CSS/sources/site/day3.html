@@ -42,7 +42,40 @@
 		<div></div>
 	</div>
 
+	<!-- 案例3：一个评论页面 -->
+	<div class="ex3">
+		<h4>评论</h4>
+		<img src="../images/star.png" alt="星级评分">
+		<a href="#">我要评论</a>
+		<textarea name="textarea" id="textarea" cols="30" rows="10">请输入对强哥意见和建议</textarea>
+		<button type="submit"><img src="../images/btn.png" alt=""></button>
+		<span>暂时没有评论</span>
+	</div>
+	<br>
+	<br>
 
+	<!-- 案例4：高度剩余法 -->
+	<div class="ex4">
+		<h4>
+			评论
+			<img src="../images/star.png" alt="星级评价">
+			<a href="#">我要评论</a>
+		</h4>
+		<textarea >请输入对强哥的意见和建议</textarea>
+		<input type="image" src="../images/btn.png">
+		<p>暂时没有评论...</p>
+	</div>
 
+	<!-- 案例5：父元素不给宽高且浮动 -->
+	<!-- 
+		当未给父元素宽度和高度的时候，在标准流中，子元素会撑开父元素
+		但当子元素浮动之后，会脱标，此时会形成一条线！！
+	 -->
+	<div class="ex5">
+		<div class="father">
+			<div class="son1"></div>
+			<div class="son2"></div>
+		</div>
+	</div>
 </body>
 </html>
