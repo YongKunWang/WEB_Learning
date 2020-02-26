@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数练习1</title>
+	<script>
+		/*
+			函数需要先定义，然后才能使用
+			函数的命名需要使用驼峰命名法
+			函数如果重名，后面会把前面的函数覆盖掉
+		 */
+		
+		function consoleSum() {
+			var num1 = 100;
+			var num2 = 200;
+			var sum = num1 + num2;
+			console.log(sum);
+		}
+		consoleSum();
+
+		function consoleMax3() {
+			var num1 = 100;
+			var num2 = 200;
+			var num3 = 300;
+			var max = num1 > num2 ? (num1 > num3?x:num3):(num2>num3?num2:num3);
+			console.log(max);
+		}
+		consoleMax3();
+
+		function consoleSum1(x,y) {
+			console.log(x+y);
+		}
+		consoleSum1(1,2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

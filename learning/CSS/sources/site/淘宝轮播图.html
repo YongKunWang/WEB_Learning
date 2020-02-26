@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝轮播图</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		.tb {
+			width: 520px;
+			height: 280px;
+			background-color: red;
+			border: 1px solid green;
+			margin: 100px auto;
+			position: relative;
+		}
+		.tb a {
+			width: 24px;
+			height: 36px;
+			background-color: pink;
+			display: block;
+
+			position: absolute;
+
+		}
+		.arr-l {
+			background: #000 url(../images/left.png) 0 0 no-repeat;
+			left: 0;
+			top: 50%;
+			margin-top: -18px;
+		}
+		.arr-r {
+			background: #000 url(../images/right.png) 0 0 no-repeat;
+			right: 0;
+			top: 50%;
+			margin-top: -18px;
+		}
+		.tb ul {
+			width: 70px;
+			height: 13px;
+			background-color: rgb(255,255,255,0.3);
+			position: absolute;
+			bottom: 18px;
+			left: 50%;
+			margin-left: -35px;
+			border-radius: 8px;
+		}
+		.tb ul li {
+			width: 8px;
+	 		height: 8px;
+	 		background-color: #fff;
+	 		float: left;
+	 		margin: 3px;
+	 		border-radius: 50%;
+		}
+		.tb .current {
+			background-color: #f40;
+		}
+	</style>
+</head>
+<body>
+	<div class="tb">
+		<img src="../images/tb.jpg" alt="">
+		<a href="#" class="arr-l"></a>
+		<a href="#" class="arr-r"></a>
+		<ul>
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>break和cuntinue练习</title>
+	<script>
+		//跳出当前循环
+		for (var i = 0; i < 10; i++) {
+			while(true){
+				console.log(i);
+				break;
+			}
+		}
+
+		//找见100·200之间第一个被7整除的数字
+		for(var i = 100; i <= 200; i++){
+			if( i % 7 == 0){
+				console.log(i);
+				break;
+			}
+		}
+
+		//直接开始下一次循环
+		//案例:求100-200之间所有的奇数的和（用continue）
+		console.log('---');
+		var sum = 0;
+		for(var i = 100; i <= 200; i ++){
+			if(i % 2 == 0){
+				continue;
+			}
+			sum += i;
+		}
+		console.log(sum);
+
+		//求整数100~300之间额累加值，但要求跳过所有各位为3的数字
+		sum = 0;
+		for(var i = 100; i <= 200; i ++){
+			if(i % 10 == 3){
+				continue;
+			}
+			sum += i;
+		}
+		console.log(sum);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

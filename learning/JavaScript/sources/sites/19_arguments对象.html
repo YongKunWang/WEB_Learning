@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments</title>
+	<script>
+		function fun() {
+			//必须要初始化
+			var sum = 0;
+			for(var i = 0; i < arguments.length; i++ ){
+				sum += arguments[i];
+			}
+			return sum;
+		}
+		console.log(fun(1,2,3,4,5));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预先解析</title>
+	<script>
+		/*
+			预先解析：提前解析代码
+			预解析做什么事情：
+				1. 把变量的声明提前了
+						提前在所在变量作用域的最上面
+				2. 函数的声明也会提前
+						提前到当前所在的作用域的最上面
+
+		 */
+		
+		console.log(num1); //undefined
+		var num1 = 10;
+		/*
+			等价于：
+			var num1;
+			console.log(num1); 只声明为定义
+			num1 = 10;
+
+		 */
+		f1();
+		var num2 = 10;
+		function f1(){
+			console.log(num2);
+		}
+
+		/**
+		 * 等价于：
+		 * var num2;
+		 * function f1(){
+		 * 	console.log(num2);
+		 * }
+		 * f1();
+		 * num2 = 10;
+		 */
+
+	</script>
+
+	<script>
+		function f1() {
+	    	console.log(num);//undefined
+	    	var num=10;
+	    }
+	    f1();
+	    //console.log(num); error
+	    /**
+	     *等价于：
+	     *	function f1() {
+         *      var num;
+	     *		console.log(num);//undefined
+	     *		var num=10;
+	     *	}
+	     *	f1();
+	     * 
+	     */
+	</script>
+
+	<script>
+		var a = 25;
+		function abc() {
+			console.log(a); //undefined
+			var a = 10;
+		}
+		abc();
+		console.log(25); //25
+
+		/*
+			var a = 25;
+			function abc() {
+				//函数名的变量只会提升到函数的作用域的最前面
+				var a;
+				console.log(a);
+				a = 10;
+			}
+			abc();
+			console.log(25);
+
+		 */
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

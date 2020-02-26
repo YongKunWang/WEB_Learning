@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象</title>
+	<script>
+		/**
+		 * 创建对象有三种方式：
+		 * 	1. 调用系统的构造函数进行创建
+		 * 	var 变量 = new Object();
+		 *
+		 *  2. 自定义构造函数创建对象
+		 *
+		 *	3. 通过字面量来创建对象 
+		 */
+	</script>
+	<script>
+		//方法1.创建对象
+		var obj = new Object();
+		//添加属性
+		obj.name = "xx";
+		obj.age = 33;
+		obj.sex = "女";
+		//添加方法
+		obj.eat = function (){
+			console.log("eat ...");
+		}
+		obj.play = function (){
+			console.log("play ...");
+		}
+		console.log(obj.name);
+		console.log(obj.age);
+		console.log(obj.sex);
+		obj.eat();
+		console.log(obj instanceof Object)
+	</script>
+
+	<script>
+		// 方法2 工厂模式创建对象 一次性创建对个对象
+		function createObject(name,age,sex) {
+			var obj = new Object();
+			obj.name = name;
+			obj.age = age;
+			obj.sex = "女";
+			obj.sayHi = function () {
+				console.log("Hi ... My name is " + this.name + " and My age is " + this.age + " , My sex is " + this.sex);
+			}
+
+			return obj;
+		}
+
+		var person1 = createObject("x1",22,"男");
+		person1.sayHi();
+	</script>
+	<script>
+		//方法2:自定义构造函数创建对象
+		//实现过程：
+		//	1. 在内存中开辟一块空间，存储创建新的对象
+		//	2. 把this设置为当前的对象
+		//	3. 设置对象的属性和方法的值
+		//	4. 把this对象返回
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+			this.sayHi = function () {
+				console.log("My Name is " + this.name + " My age is " + this.age);
+			}
+		}
+		var person = new Person("xxx",22);
+		console.log(person.name);
+		console.log(person.age);
+		person.sayHi();
+		console.log(person instanceof Person);
+	</script>
+	<script>
+		// 方法3： 字面量创建对象
+		var obj = {}; //空对象
+		obj.name = "222";
+		obj.age = 30;
+		obj.sayHi = function () { 
+			console.log("My Name is " + this.name + " My age is " + this.age);
+		};
+		obj.sayHi();
+
+		var obj1 = {
+			name :"dsds",
+			age : 40,
+			sayHi:function () { 
+			console.log("My Name is " + this.name + " My age is " + this.age);
+			},
+		};
+		obj1.sayHi();
+		obj1.name = "xxx";
+		obj1.sayHi();
+		//设置和获取属性的另一种写法
+		obj1["name"]="sss";
+		obj1.sayHi();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

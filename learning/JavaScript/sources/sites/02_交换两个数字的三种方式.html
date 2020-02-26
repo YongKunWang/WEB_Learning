@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>交换数字的三种方式</title>
+	<script>
+		var a = 10;
+		var b = 100;
+		var temp = a;
+		a = b; 
+		b = temp;
+		console.log(a,b);
+
+		var a2 = 10;
+		var b2 = 100;
+		a2 = a2 + b2;
+		b2 = a2 - b2;
+		a2 = a2 - b2;
+		console.log(a2,b2);
+
+		var a3 = 10;
+		var b3 = 100;
+		// a = a^b;
+		// a = a^b;
+		// b = a^a;
+		a3 = a3^b3;   
+		b3 = a3^b3;
+		a3 = a3^b3;
+		console.log(a3,b3);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

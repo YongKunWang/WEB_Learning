@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组练习</title>
+	<script>
+		//1. 数组初始化
+		var arr1 = new Array(); // 空数组
+		var arr2 = new Array(5); //长度为5的数组，每一个值为undefined
+		var arr3 = new Array(1,2,3,4,5);
+		var arr4 = [1,2,3,4,5,6,7,,8,9,0];
+		//数组中元素的值可以不一样
+		var arr5 = [1,"1","red",true,false];
+		
+		console.log(arr1);
+		console.log(arr2);
+		console.log(arr3);
+		console.log(arr4);
+		console.log(arr5);
+
+		for (var i = 0; i < arr5.length; i++) {
+			console.log(arr5[i]);
+		}
+
+		//eg1. 求数组中所有元素的和
+		var eg = [1,2,3,4,5,9,7,8,6,0];
+		var sum1 = 0;
+		for(var i = 0; i < eg.length; i ++)
+			sum1 += eg[i];
+		console.log(sum1);
+		//eg2.求取元素最大值
+		var j = 0;
+		for(var i = 0; i < eg.length; i ++){
+			if(eg[i] > eg[j]){
+				j = i;
+			}
+		}
+		console.log(eg[j]);
+
+		//eg3.数组元素进行拼接
+		var names=["卡卡西","佐助","鸣人","大蛇丸","雏田","小苏","凤姐","黑崎一护"];
+		var str;
+		for(var i = 0; i < names.length - 1; i ++){
+			str += names[i] + '|';
+		}
+		console.log(str + names[names.length - 1]);
+		
+		//去除重复元素0
+		var arr = [10, 0, 20, 0, 30, 0, 50];
+		var newarr = [];
+		for(var i = 0; i < arr.length; i ++){
+			if(arr[i] != 0){
+				newarr[newarr.length] = arr[i];
+			}
+		}
+		console.log(newarr);
+		
+		// 反转数组
+		var array = [10, 20, 30, 40, 50];
+		for(var i = 0; i < (parseInt)(array.length / 2); i ++){
+			var temp = array[i];
+			array[i] = array[array.length - 1-i];
+			array[array.length - 1-i] = temp;
+		}
+		console.log(array);
+		</script>	
+</body>
+</html>

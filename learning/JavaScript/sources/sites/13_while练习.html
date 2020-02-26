@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>while练习</title>
+	<script>
+		//求6的阶乘
+		var num = 6;
+		var sum = 1;
+		while(num > 0){
+			sum *= num --;
+		}
+		console.log(sum);
+
+		//求100以内所有偶数的和
+		var num1 = 0;
+		var sum1 = 0;
+		while(num1 <= 100){
+			if(num1 % 2 == 0)
+				sum1 += num1;
+			num1 ++;
+		}
+		console.log(sum1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

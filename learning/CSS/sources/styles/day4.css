@@ -1,0 +1,23 @@
+.ex1 .top {
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+	border: 1px solid green;
+}
+.ex1 .main {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border: 1px solid green;
+	margin-top: 10px;
+	margin-left: 10px;
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+.ex1 .bottom {
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	border: 1px solid pink;
+}

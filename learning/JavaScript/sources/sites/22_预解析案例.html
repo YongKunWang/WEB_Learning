@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预解析案例</title>
+	<script>
+//函数中的变量只会提前到函数的作用域中的最前面,不会出去
+//预解析会分段(多对的script标签中函数重名,预解析的时候不会冲突)
+
+		function f1() {
+		 console.log(num);//undefined
+		 var num=10;
+		}
+		f1();
+		//console.log(num);
+		/*
+			function f1() {
+				var num;
+				console.log(num);//undefined
+				num=10;
+			}
+			f1();
+			console.log(num); //未定义
+
+		 */
+		f1();
+		function f1() {
+      		console.log("哈哈");
+    	}
+
+    	/*
+    	function f1() {
+			console.log(num);//undefined
+			var num=10;
+		}
+		function f1() {
+      		console.log("哈哈");
+    	}
+    	f1();
+    	f1();
+    	 */
+
+	</script>
+	<!-- 预解析会分段(多对的script标签中函数重名,预解析的时候不会冲突) -->
+	<script>
+		f1();
+    	function f1() {
+      		console.log("嘎嘎");
+    	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
