@@ -3,7 +3,7 @@
 ## 课程介绍
 
 ```html
-/*
+   /*
     *
     * JavaScript :简称:js
     * js分三个部分:
@@ -48,6 +48,28 @@
     *
     * */
 ```
+
+```js
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+	<meta charset="UTF-8">
+	<title>01_JS的三种样式书写格式</title>
+	<script>
+		alert("写在script标签内...");
+	</script>
+	<script src="../../scripts/outer.js">
+		
+	</script>
+
+</head>
+<body>
+	<input type="button" value="按钮" onclick="alert('写在行内样式中...')" />
+</body>
+</html>
+```
+
+
 
 ## 注意问题
 
@@ -258,6 +280,30 @@ typeof(变量名)
 </html>
 ```
 
+```js
+<DOCTYPE html>
+<html lang="zh-CH">
+	<head>
+		<meta charset="UTF-8">
+		<title>变量类型</title>
+		<script>
+			//null 表示空指针对象
+			//表明声明一个字符串对象的引用，但是指向null
+			//也就是说还没有指向任何内容
+			var nul = null;
+			console.log(typeof nul);
+			console.log(String(nul));
+			//表示声明一个字符串类型的引用，其值为""空字符串
+			//这个str引用指向的是空字符串的内存空间
+			var str = '';
+			console.log(typeof str);
+		</script>	
+	</head>
+</html> 
+```
+
+
+
 ## 数字
 
 数字类型：整数和小数
@@ -270,6 +316,7 @@ typeof(变量名)
     * var num3=0x123;//十六进制
     * */
     //数字类型有范围: 最小值和最大值
+    // 静态方法   
 //    console.log(Number.MAX_VALUE);//数字的最大值
 //    console.log(Number.MIN_VALUE);//数字的最小值
 
@@ -545,6 +592,7 @@ typeof(变量名)
      * 操作符:一些符号-----用来计算
      *
      * 算数运算符:  +  -  * /(真正的除法) %
+     * var s = parseInt(num1 / num2);
      * 算数运算表达式:由算数运算符连接起来的表达式
      * 一元运算符: 这个操作符只需要一个操作数就可以运算的符号  ++  --
      * 二元运算符: 这个操作符需要两个操作数就可以运算,
@@ -673,8 +721,6 @@ typeof(变量名)
 </body>
 </html>
 ```
-
-
 
 ## 常识
 
@@ -3501,6 +3547,571 @@ typeof(变量名)
 //    console.log(Array instanceof Object);
 //    var obj={};
 //    console.log(obj instanceof Object);
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>
+```
+
+## Math对象
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math对象</title>
+	<style>
+		#dv {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script>
+		console.log(Math.PI);
+		console.log(Math.E);
+		console.log(Math.abs(-3));
+		console.log(Math.ceil(4.4));
+		console.log(Math.floor(4.4));
+		console.log(Math.max(12,3,4,5));
+	</script>
+
+	<script>
+		/*自定义函数实现Math。max方法*/
+		function myMax(){
+			this.getMax = function (){
+				var max = arguments[0];
+				for(var i = 0; i < arguments.length; i ++){
+					if(max < arguments[i]){
+						max = arguments[i];
+					}
+				}
+				return max;
+			}
+		}
+
+		var mt = new myMax();
+		var result = mt.getMax(1,2,3,4,5,6,7);
+		console.log(result);
+
+	</script>
+	<script>
+		/*随机生成一个十六进制的颜色值*/
+		function getColor() {
+			var str = "#";
+			var arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+			for(var i = 0; i < 6; i ++){
+				var num = parseInt(Math.random()*16);
+				str += arr[num];
+			}
+			return str;
+		}
+
+		window.onload = function () {
+			document.getElementById("dv").style.backgroundColor = getColor();
+		}
+	</script>
+
+</head>
+<body>
+	<div id="dv"></div>
+</body>
+</html>
+```
+
+## Date 对象
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远的24k纯帅$</title>
+  <script>
+    //创建实例对象
+
+
+    //    var dt=new Date();
+    //    //当前的时间---当前的服务器
+    //    console.log(dt);
+
+    //    var dt=new Date("2017-08-12");
+    //    //传入的时间
+    //    console.log(dt);
+
+
+    //var dt=new Date("2017/08/12");
+    //传入的时间
+    //console.log(dt);
+    //获取时间的对象
+    //    var dt=Date.now();
+    //    console.log(dt);//毫秒
+
+//
+//    var dt = new Date();
+//
+//    //获取年份
+//    console.log(dt.getFullYear());
+//    //获取月份
+//    console.log(dt.getMonth()+1);//是0开始的 真实的月份是需要加1的
+//    //获取日期
+//    console.log(dt.getDate());
+//    //获取小时
+//    console.log(dt.getHours());
+//    //获取分钟
+//    console.log(dt.getMinutes());
+//    //获取秒
+//    console.log(dt.getSeconds());
+//
+//    //获取星期
+//    console.log(dt.getDay());//星期从0开始的
+
+
+   // var dt=new Date();
+
+    //console.log(dt.toDateString());//英文的---日期
+    //console.log(dt.toLocaleDateString());//数字格式--日期
+
+//    console.log(dt.toTimeString());//小时分钟秒
+//    console.log(dt.toLocaleTimeString());//小时分钟秒
+
+    //console.log(dt.valueOf());//毫秒值
+//    console.log(dt);
+//    //转成字符串
+//    console.log(dt.toString());
+
+//    var num=10;
+//    console.log(num.toString());
+      //var dt=new Date();
+//    var dt=+new Date();//一种特殊的写法,只适用于这个Date的对象
+//    console.log(dt);
+
+//    dt.getFullYear();//年
+//    dt.getMonth();//月---从0开始
+//    dt.getDate();//日
+//    dt.getHours();//小时
+//    dt.getMinutes();//分钟
+//    dt.getSeconds();//秒
+//    dt.getDay();//星期---从0开始
+//    dt.toDateString();//日期
+//    dt.toLocaleDateString();//日期
+//    dt.toTimeString();//时间
+//    dt.toLocaleTimeString();//时间
+//    dt.valueOf();//毫秒
+     </script>
+</head>
+<body>
+
+
+</body>
+</html>
+```
+
+## string 对象
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远的24k纯帅$</title>
+  <script>
+    /*
+     *
+     * 实例方法---->必须要通过new的方式创建的对象(实例对象)来调用的方法
+     * 静态方法---->直接通过大写的构造函数的名字调用的方法(直接通过大写的对象名字调用的)
+     *
+     * */
+    /*
+     *
+     * 字符串的常用属性:
+     * .length------>字符串的长度
+     * .charAt(索引),返回值是指定索引位置的字符串,超出索引,结果是空字符串
+     * .fromCharCode(数字值,可以是多个参数),返回的是ASCII码对应的值
+     * .concat(字符串1,字符串2,...);返回的是拼接之后的新的字符串
+     * .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
+     * .lastIndexOf(要找的字符串);从后向前找,但是索引仍然是从左向右的方式,找不到则返回-1
+     * .replace("原来的字符串","新的字符串");用来替换字符串的
+     * .slice(开始的索引,结束的索引); 从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
+     * .split("要干掉的字符串",切割后留下的个数);切割字符串
+     * .substr(开始的位置,个数);返回的是截取后的新的字符串
+     * .substring(开始的索引,结束的索引),返回截取后的字符串,不包含结束的索引的字符串
+     * .toLocaleLowerCase();转小写
+     * .toLowerCase();转小写
+     * .toLocaleUpperCase()转大写
+     * .toUpperCase();转大写
+     * .trim();干掉字符串两端的空格
+     *
+     *
+     * */
+
+
+    //    var str="12345";
+    //    console.log(str.length);
+    //
+    //    var str="whatareyounoshalei";
+    //    var result=str.charAt(1000);
+    //    console.log(result);
+
+    //    var str=String.fromCharCode(107,108,109);
+    //    console.log(str);
+
+
+    //sos
+
+
+    //    var str=String.fromCharCode(83,79,83);
+    //    console.log(str);
+
+
+    //    var str="what";
+    //    console.log(str+"are"+"you"+"no"+"sha"+"lei");
+
+
+    //    var str="小苏";
+    //    console.log(str.concat("喜欢","凤姐","这是","真的"));
+
+
+    //    var str="小苏真的好猥好琐啊";
+    //    var index=str.indexOf("好",5);
+    //    console.log(index);
+
+    //    var str="helo amen";
+    //    var index=str.lastIndexOf("Y");
+    //    console.log(index);
+
+    //    var str="小苏好帅哦,真的好勇敢哦";
+    //    if(str.indexOf("帅")!=-1){
+    //      str=str.replace("帅","猥琐");
+    //    }else{
+    //      console.log("不存在");
+    //    }
+    //    console.log(str);
+
+
+//    var str = "如果有一天我邪恶了,请记住,我曾纯洁过";
+//    //从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
+//    str = str.slice(5, 10);
+//    console.log(str);
+
+//    var str="乔峰|慕容|凤姐|梅超风|小苏|大蛇丸";
+//    var arr=str.split("|");
+//    for(var i=0;i<arr.length;i++){
+//      console.log(arr[i]);
+//    }
+
+
+//    var str="哈哈,小苏真的是好帅哦";
+//    str=str.substr(5,5);
+//    console.log(str);
+
+
+//    var str="哈哈,小苏真的是好帅哦";
+//    str=str.substring(5,9);
+//    console.log(str);
+
+//    var str="HELLO";
+//    //str=str.toLocaleLowerCase();
+//    str=str.toLowerCase();
+//    console.log(str);
+
+
+//    var str="hello";
+//    str=str.toLocaleUpperCase();
+//    //str=str.toUpperCase();
+//    console.log(str);
+
+    var str="   哦,这    是一个神奇的一天   ";
+    str=str.trim();
+    console.log("===="+str+"====");
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>
+```
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串对象</title>
+	<script>
+		/*
+			1. String 是一个对象
+			2. 字符串可以看做是字符的组成部分，但是JS中没有字符这一类型
+			3. JS中的字符串 可以使用单引号，也可以使用双引号
+			4. 因为字符串可以看做是数组，所以可以通过for循环来进行遍历
+			5. 字符串特性：不可变性，字符串的值是不可以被改变的
+			6. 字符串的值看起来被改变了，那是因为指向改变了，并不是真的值改变了
+		 */
+		var str = "Hello";
+		str = "World!";
+		console.log(str);
+		//上述代码的指向改变了！！
+		for(var i = 0; i <str.lenght; i++)
+			console.log(str[i]);
+		str[1] = "W";
+		console.log(str);
+		//上述代码表明，字符串的不可变性！！
+	</script>
+	<script>
+		/*字符串方法*/
+		/*
+			实例方法：必须通过new方法来创建对象来调用方法
+			静态方法：直接通过大写的构造函数调用的方法
+			
+		 */
+		var str1 = "Hello World!";
+		console.log(str1.lenght);
+		console.log(str1.charAt(1));
+
+
+	</script>
+	
+	<script>
+		/*字符串案例*/
+		//1.
+		var str = "我爱最帅的杨哥,太帅了";
+		var key = "杨哥";
+		var index = str.indexOf(key);
+		console.log("index : " + index);
+		str = str.substr(index,2);
+		console.log(str); //杨哥
+	</script>
+	<script>
+		//2.
+		var str2 = "hello wod odd ott fbo nhyo";
+		var index = 0;
+		int key = "o";
+		while((index = str2.indexOf(key,index))!= -1){
+			console.log(index);
+			index += key.length;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+```
+
+## Array对象
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远的24k纯帅$</title>
+  <script src="common.js"></script>
+  <script>
+
+    /*
+     *
+     * Array.isArray(对象)---->判断这个对象是不是数组
+     * instanceof关键字
+     * .concat(数组,数组,数组,...) 组合一个新的数组
+     * .every(函数)--返回值是布尔类型,函数作为参数使用,函数中有三个参数,第一个参数是元素的值，第二个参数是索引值,第三个参数是原来的数组(没用)
+     * 如果这个数组中的每个元素的值都符合条件,最后才返回的是true
+     *
+     * .filter(函数);返回的是数组中每一个元素都复合条件的元素,组成了一个新的数组
+     *
+     * .push(值);--->把值追加到数组中,加到最后了---返回值也是追加数据之后的数组长度
+     * .pop();--->删除数组中最后一个元素,返回值就是删除的这个值
+     * .shift();--->删除数组中第一个元素,返回值就是删除的这个值
+     * .unshift();--->向数组的第一个元素前面插入一个新的元素,----返回值是插入后的程度
+     * .forEach(函数)方法---遍历数组用---相当于for循环
+     * .indexOf(元素值);返回的是索引,没有则是-1
+     * .join("字符串");----返回的是一个字符串
+     * .map(函数);--->数组中的每个元素都要执行这个函数,把执行后的结果重新的全部的放在一个新的数组中
+     * .reverse();----->反转数组
+     * .sort();---排序的,可能不稳定,如果不稳定,请写MDN中的那个固定的代码
+     * .arr.slice(开始的索引,结束的索引);把截取的数组的值放在一个新的数组中,但是不包含结束的索引对应的元素值
+     * .splice(开始的位置,要删除的个数,替换的元素的值);一般是用于删除数组中的元素,或者是替换元素,或者是插入元素
+     *
+     *
+     * */
+    //构造函数
+    //    var arr1=new Array();
+    //    //字面量的方式
+    //    var arr2=[];
+
+
+    //对象是不是数组类型:两种
+    //1   instanceof
+    //    var obj=[];
+    //    console.log(obj instanceof Array);//false
+    //
+    //    //2 使用数组的
+    //    console.log(Array.isArray(obj));//
+
+
+    //    var arr=["a","b","c"];
+    //    var newArr=Array.from(arr);
+    //    console.log(newArr);
+
+    //    var arr1=[10,20,30];
+    //    var arr2=[40,50,60];
+    //    console.log(arr1.concat(arr2));
+
+    //    var arr=[1000,2000,3000];
+    //    //a----: 元素的值
+    //    //b----: 索引的值
+    //    //c----:谁调用了这个方法,那么c就是谁---->arr
+    //   var flag= arr.every(function (a,b) {
+    //      //console.log(a+"==="+b+"===="+c);
+    //      return a>2000;//数组中的每个元素的值都要大于2000的情况,最后才返回true
+    //    });
+
+
+    //    var arr=["小明明lkko","小曹操674","小白白bd","笑眯眯a"];
+    //   var flag=arr.every(function (ele,index) {
+    //      //数组中的每个元素的长度是不是大于4
+    //      return ele.length>4;
+    //    });
+
+
+    //console.log(flag);
+
+
+    //    var arr=[10,20,30,40,50,60,70,80];
+    //    var newArr=arr.filter(function (ele) {//ele---每个元素
+    //      return ele>40;
+    //    });
+    //    console.log(newArr);
+
+    //    var arr=[10,0,20,0,40,0,60,100];
+    //    var newArr=arr.filter(function (ele) {
+    //      return ele!=0;
+    //    });
+    //    console.log(newArr);
+
+    //    var arr=[10,20,30,40,50];
+    //    var result=arr.unshift(100);
+    //    console.log(result);
+    //    console.log(arr);
+//
+//    var arr = [10, 20, 30, 40];
+//    arr.forEach(function (ele,index) {
+//      console.log(ele+'======'+index);
+//    });
+
+//    var arr=[10,20,30,40];
+//    var index=arr.indexOf(300);
+//    console.log(index);
+
+
+//    var arr=["小白","小黑","小红","小芳","小绿","小苏"];
+//    var str=arr.join("|");
+//    console.log(str);
+
+
+//    var numbers = [1, 4, 9];
+//    var roots = numbers.map(Math.sqrt);
+//    console.log(roots);
+
+
+//    var arr=[10,20,30,40,50];
+//    arr.reverse();//反转
+//    console.log(arr);
+
+
+//    var arr=[1,40,20,10,100];
+//    //a---arr[j]
+//    //b---arr[j+1]
+//    arr.sort(function (a,b) {
+//      if(a>b){
+//        return 1;
+//      }else if(a==b){
+//        return 0;
+//      }else{
+//        return -1;
+//      }
+//    });
+//    console.log(arr);
+
+
+//
+//    var arr=[10,20,30,40,50,60,70,80,90,100];
+//    var newArr= arr.slice(3,7);
+//    console.log(newArr);
+
+
+    var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+   // myFish.splice(2, 0, 'drum'); // 在索引为2的位置插入'drum'
+
+    // myFish 变为 ["angel", "clown", "drum", "mandarin", "sturgeon"]
+
+    myFish.splice(2, 1); // 从索引为2的位置删除一项（也就是'drum'这一项）
+
+    console.log(myFish);
+    // myFish 变为 ["angel", "clown", "mandarin", "sturgeon"]
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>
+```
+
+## 基本包装类型
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远的24k纯帅$</title>
+  <script>
+    //基本包装类型
+
+    //普通变量不能直接调用属性或者方法
+    //对象可以直接调用属性和方法
+
+    //基本包装类型:本身是基本类型,但是在执行代码的过程中,如果这种类型的变量调用了属性或者是方法,那么这种类型就不再是基本类型了,而是基本包装类型,这个变量也不是普通的变量了,而是基本包装类型对象
+    //string number boolean
+
+
+//    var str="hello";
+//    str=str.replace("ll","HH");
+//    console.log(str);
+
+
+//    var str=new String("hello");
+//    str=str.replace("ll","HH");
+//    console.log(str);
+//    str=null;
+
+//    var num=10;//number---->
+//    console.log(num.toString());
+
+
+    //如果是一个对象&&true,那么结果是true
+    //如果是一个true&&对象,那么结果是对象
+
+
+//    var flag=new Boolean(false);
+//    var result=true&&flag;
+//    console.log(result);
+
+
+//    var num=10;
+//    var num2=Number("10");//转换,没有new---类型转
+//    var num3=new Number("10");//基本包装类型
+
 
   </script>
 </head>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局(左侧固定 右侧自适应)</title>
+	<style>
+		.outer {
+			widows: 100%;
+			background-color: yellow;
+			overflow: hidden;
+		}
+		.left {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			float: left;
+		}
+		.right {
+			height: 220px;
+			background-color: blue;
+			margin-left: 200px;
+		}
+		/*浮动
+			会使得块元素变为行内块元素
+			脱标
+			不会超过父级元素的内边距
+			在使用浮动是要定义父元素的相关信息
+		*/
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="left">左侧固定宽度</div>
+		<div class="right">右侧自适应宽度</div>
+	</div>
+</body>
+</html>

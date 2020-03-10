@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实践相关样式</title>
+	<style>
+		.div1 {
+			/* 
+				1.未指定宽度和高度
+				宽度为100%
+				高度靠内部内容撑开
+				2. 指定了高度：
+				内部样式也会把盒子撑大
+			*/
+			border: 1px solid red;
+		}
+
+		.div2 {
+			border: 1px solid green;
+		}
+		.div3 {
+			border: 1px solid purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<!-- 目的：分清楚块状元素 行内元素 行内块元素 -->
+		<h1>块状元素</h1>
+		<p>块状元素</p>
+		<div>块状元素</div>
+		<ul>
+			<li>块状元素</li>
+		</ul>
+		<ol>
+			<li>块状元素</li>
+		</ol>
+		<p>
+			块状元素的特点：
+		</p>
+		<p>
+			1. 从新行开始
+		</p>
+		<p>
+			2. 高度 宽度 内外边距都可以控制
+		</p>
+		<p>
+			3. 可以容纳内联元素和其他块元素
+		</p>
+	</div>
+	<div class="div2">
+		行内元素：<br>
+		<a href="#">行内元素</a>
+		<strong>行内元素</strong>
+		<b>行内元素</b>
+		<span>行内元素</span>
+
+		1. 和相邻元素在同一行<br>
+		2. 宽高无效，但是水平方向的内外边距可以控制，垂直方向无效 <br>
+		3. 默认宽度为它本身的宽度 <br>
+		4. 行内元素只能容纳文本或者其他行内元素 <br>
+		5. a特殊，可以存放块状元素 <br>
+
+
+	</div>
+
+	<div class="div3">
+		行内块元素： <br>
+		<img src="../images/task01_1.png" alt="">
+		<input type="text">
+		<table>
+			<tr>
+				<td>1</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

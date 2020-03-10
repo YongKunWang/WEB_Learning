@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击按钮修改性别和兴趣</title>
+</head>
+<body>
+	<input type="button" value="修改" id="btn1">
+	<input type="radio" value="1" name="sex"> 男
+	<input type="radio" value="2" name="sex" checked> 女
+	<input type="radio" value="3" name="sex" id="ch1"> 中间
+	<br>
+
+	<input type="button" value="修改" id="btn2">
+	<input type="checkbox" value="1" name="xq" id="c2">eat1
+	<input type="checkbox" value="2" name="xq" id="c3">eat2
+	<input type="checkbox" value="3" name="xq" id="c4">eat3
+	<input type="checkbox" value="4" name="xq" checked>eat4
+	<input type="checkbox" value="5" name="xq" checked>eat5
+	<input type="checkbox" value="6" name="xq" checked>eat6
+	<br>
+
+	<input type="button" value="修改" id="btn3">
+	<select name="" id="ss">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5" id="s5">5</option>
+		<option value="6">6</option>
+
+	</select>
+	
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("btn1").onclick = function () {
+			my$("ch1").checked = true;
+		}
+	</script>
+	<script>
+		my$('btn2').onclick = function () {
+			my$('c2').checked=true;
+			my$('c3').checked=true;
+			my$('c4').checked=true;
+		}
+	</script>
+	<script>
+		my$('btn3').onclick = function () {
+			my$('s5').selected=true;
+		}
+	</script>
+</body>
+</html>

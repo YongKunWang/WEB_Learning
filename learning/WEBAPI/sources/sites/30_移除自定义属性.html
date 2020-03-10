@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移除自定义属性</title>
+	<style>
+		div {
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+		}
+		.cls {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="移除样式", id="btn1">
+	<div id="dv" score="10" class="cls"></div>
+
+	<script>
+		document.getElementById('btn1').onclick = function () {
+			document.getElementById('dv').removeAttribute('score');
+			document.getElementById('dv').removeAttribute('class');
+		};
+	</script>
+</body>
+</html>

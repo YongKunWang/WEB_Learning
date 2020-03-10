@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>按键排他功能</title>
+</head>
+<body>
+	<input type="button" value="没怀孕"> <br />
+	<input type="button" value="没怀孕"> <br />
+	<input type="button" value="没怀孕"> <br />
+	<input type="button" value="没怀孕"> <br />
+	<input type="button" value="没怀孕"> <br />
+	<input type="button" value="没怀孕"> <br />
+
+	<script>
+		var btnObj = document.getElementsByTagName('input');
+		//为每一个按钮分别注册事件
+		for(var i = 0; i < btnObj.length; i++){
+
+			btnObj[i].onclick = function () {
+				//所有的按钮被重置
+				for (var j = 0; j < btnObj.length; j++) {
+        			btnObj[j].value = "没怀孕";
+      			}
+      			//被按下的按钮被打开了
+      			this.value = "怀孕了";
+			}
+			
+		}
+	</script>
+</body>
+</html>

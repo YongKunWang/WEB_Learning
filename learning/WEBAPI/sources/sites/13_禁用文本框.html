@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>禁用文本框</title>
+</head>
+<body>
+	<input type="button" value="禁用文本框" id="btn1">
+	<input type="text" name="" id="t1">
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		my$('btn1').onclick = function () {
+			my$('t1').disabled=true;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景变色</title>
+</head>
+<body>
+	<input type="button" value="背景变色" id="btn1">
+	<ul id="ul1">
+		<li>文字文字文字文字文字文字</li>
+		<li>文字文字文字文字文字文字</li>
+		<li>文字文字文字文字文字文字</li>
+		<li>文字文字文字文字文字文字</li>
+		<li>文字文字文字文字文字文字</li>
+	</ul>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		my$('btn1').onclick = function () {
+			my$('ul1').style.backgroundColor = "yellow";
+		}
+	</script>
+</body>
+</html>

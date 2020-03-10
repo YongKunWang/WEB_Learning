@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复习</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		.box {
+			width: 300px;
+			height: 300px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+		}
+		.box .hd li {
+			display: inline-block;
+			width: 70px;
+			height: 50px;
+			background-color: pink;
+			text-align: center;
+			line-height: 50px;
+			cursor: pointer;
+		}
+		.box .hd .current {
+			background-color: purple;
+		}
+		
+		.box .bd li {
+			height: 250px;
+			background-color: pink;
+			display: none;
+		}
+		.box .bd .current {
+			background-color: purple;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="hd">
+			<ul>
+				<li class="current">体育</li>
+				<li>娱乐</li>
+				<li>新闻</li>
+				<li>综合</li>
+			</ul>
+
+		</div>
+		<div class="bd">
+			<ul>
+				<li class="current">体育模块</li>
+				<li>娱乐模块</li>
+				<li>新闻模块</li>
+				<li>综合模块</li>
+			</ul>
+
+		</div>
+	</div>
+	<script>
+		//使用索引将两个部分连接在一起
+		var box = document.getElementById('box');
+
+		var hd = box.getElementsByTagName('div')[0];
+		var listHdObjs = hd.getElementsByTagName('li');
+
+		var bd = box.getElementsByTagName('div')[1];
+		var listBdObjs = bd.getElementsByTagName('li');
+
+		for(var i=0; i < listHdObjs.length; i ++){
+			
+			listHdObjs[i].setAttribute('index',i);
+
+			listHdObjs[i].onclick = function () {
+				for(var j=0; j < listHdObjs.length; j++){
+					listHdObjs[j].removeAttribute('class');
+				}
+				this.className = 'current';
+
+				var num = this.getAttribute('index');
+				console.log(num);
+
+				for(var k=0; k < listBdObjs.length; k++){
+
+					listBdObjs[k].removeAttribute('class');
+				}
+				listBdObjs[num].className = 'current';
+			}
+
+			
+		}
+	</script>
+</body>
+</html>

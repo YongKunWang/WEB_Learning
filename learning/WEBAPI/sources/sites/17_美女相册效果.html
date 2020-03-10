@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- 
+		1. 多个并列的东西使用无序列表进行实现
+		2. 列表左浮动可以实现并列，此时处于脱标状态，在父级元素添加
+		
+
+	 -->
+	<meta charset="UTF-8">
+	<title>美女相册</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background-color: #ccc;
+		}
+		ul {
+			overflow: hidden;
+		}
+		li {
+			display: inline;
+			margin: 20px 10px 20px 10px;
+			list-style: none;
+			float: left;
+		}
+		.dis {
+			/*border: 1px solid yellow;*/
+			margin-left: 20px;
+		}
+
+		.dis img {
+			/*border: 1px solid red;*/
+			display: block;
+			margin: 20px 0px 20px 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>美女相册</h2>
+
+	<ul id="imageallery">
+		<li>
+			<a href="../images/1.jpg" title="美女A">
+				<img src="../images/1-small.jpg" width="100" alt="" title="美女A">
+			</a>
+		</li>
+
+		<li>
+			<a href="../images/2.jpg" title="美女B">
+				<img src="../images/2-small.jpg" width="100" alt="" title="美女B">
+			</a>
+		</li>
+
+		<li>
+			<a href="../images/3.jpg" title="美女C">
+				<img src="../images/3-small.jpg" width="100" alt="" title="美女C">
+			</a>
+		</li>
+
+		<li>
+			<a href="../images/4.jpg" title="美女D">
+				<img src="../images/4-small.jpg" width="100" alt="" title="美女D">
+			</a>
+		</li>
+			
+	</ul>
+
+	<div class="dis">
+		<img src="../images/placeholder.png" width="450" alt="" id="images">
+		<p id="des">
+			请选择一幅图片
+		</p>
+	</div>
+
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		var aObjs = my$('imageallery').getElementsByTagName('a');
+		for(var i = 0; i < aObjs.length; i ++){
+			aObjs[i].onclick = function () {
+
+				my$('images').src = this.href;
+				my$('des').innerText=this.title;
+				return false;
+			}
+		}
+	</script>
+</body>
+
+</html>

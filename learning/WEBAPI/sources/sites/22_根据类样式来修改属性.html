@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>22_根据类样式来修改属性</title>
+</head>
+<body>
+	<input type="button" value="使用类样式修改元素" id="btn1">
+	<p>你好！</p>
+	<p class="cls">你好呀！</p>
+	<div>你好</div>
+	<div class="cls">你好呀</div>
+	<span>你好</span>
+	<br>
+	<span class="cls">你好呀</span>
+
+	<script>
+		document.getElementById('btn1').onclick = function () {
+			var classObjs = document.getElementsByClassName('cls');
+			for(var i = 0; i < classObjs.length; i ++){
+				classObjs[i].style.backgroundColor = "red";
+			}
+		}
+	</script>
+</body>
+</html>

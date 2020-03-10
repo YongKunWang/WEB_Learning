@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局(左侧固定 右侧自适应)</title>
+	<style>
+		.outer {
+			width: 100%;
+			background-color: yellow;
+			position: relative;
+		}
+		.left {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.right {
+			height: 200px;
+			background-color: blue;
+			position: absolute;
+			left: 200px;
+			top:0;
+			bottom: 0;
+			right: 0;
+		}
+		/*
+			子绝父相，绝对真理
+				1.当设置子元素为绝对定位时，子元素首先会脱离父级元素的束缚（视觉上）需要设置边偏移量才能正确的布局
+				2. 相对定位不脱标
+				3. 绝对定位脱标
+
+		 */
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="left">左侧固定宽度</div>
+		<div class="right">右侧自适应宽度</div>
+	</div>
+</body>
+</html>

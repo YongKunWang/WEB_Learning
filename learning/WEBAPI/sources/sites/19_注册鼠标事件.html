@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册鼠标事件</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>红旗</li>
+	  	<li>五菱宏光</li>
+	  	<li>奔驰</li>
+	  	<li>兰博基尼</li>
+	  	<li>哈弗</li>
+	  	<li>奥拓</li>
+	  	<li>奥迪</li>
+	  	<li>悍马</li>
+	</ul>
+
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+
+	<script>	
+		var liObjs = my$('ul1').getElementsByTagName('li');
+		for(var i = 0; i < liObjs.length; i ++){
+			liObjs[i].onmouseover = function () {
+				this.style.backgroundColor = "yellow";
+			}
+			liObjs[i].onmouseout = function () {
+				this.style.backgroundColor = "white";
+			}
+		}
+
+	</script>
+</body>
+</html>

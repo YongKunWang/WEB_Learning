@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改a标签的属性</title>
+</head>
+<body>
+	<input type="button" value="修改a标签" id="btn1">
+	<a href="https://www.jiumodiary.com/" id="a1">鸠摩搜书</a>
+
+	<script>
+		var btn1Obj = document.getElementById('btn1');
+		btn1Obj.onclick = function () {
+			var a1Obj = document.getElementById('a1');
+			a1Obj.href = "http://www.baidu.com";
+			a1Obj.innerText = "百度";
+		}
+	</script>
+</body>
+</html>

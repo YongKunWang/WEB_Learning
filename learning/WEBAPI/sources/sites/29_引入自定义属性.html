@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>引入自定义属性</title>
+	<style>
+		li {
+			list-style:  none;
+			cursor: pointer;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul>
+		<li score="10">111111</li>
+		<li score="20">222222</li>
+		<li score="30">333333</li>
+		<li score="40">444444</li>
+		<li score="50">555555</li>
+		<li>666666</li>
+	</ul>
+
+	<script>
+		
+		var listObjs = document.getElementsByTagName('li');
+		for(var i=0; i< listObjs.length; i++){
+			// listObjs[i].score = (i+2)*10;
+			listObjs[i].setAttribute('score',(i+2)*10);
+
+
+			listObjs[i].onclick = function() {
+				//必须使用这种方法
+				//必须加上this关键字
+				alert(this.getAttribute('score'));
+			};
+		}
+
+	</script>
+</body>
+</html>

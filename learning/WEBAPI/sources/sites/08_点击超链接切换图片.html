@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击超链接切换图片</title>
+</head>
+<body>
+	<a href="../images/1.jpg" id="ak"><img src="../images/1-small.jpg" alt="" id="im"></a>
+	<script>
+		document.getElementById('im').onclick = function () {
+			this.src = document.getElementById('ak').href;
+			//必须加上，不加的话会进行页面的跳转
+			return false;
+		}
+	</script>
+</body>
+</html>

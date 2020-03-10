@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>23_查询选择器</title>
+</head>
+<body>
+	<input type="button" value="查询选择器" id="btn1">
+	<p>这是一个p</p>
+	<p class="cls">这是一个p</p>
+	<div>这是一个p</div>
+	<div class="cls">这是一个p</div>
+	<script>
+		var btnObj = document.querySelector('#btn1');
+		btnObj.onclick = function () {
+			alert("终于找到我了...");
+		}
+
+		var btnObjs = document.querySelectorAll('.cls');
+		for(var i = 0; i < btnObjs.length; i++){
+			btnObjs[i].style.color = "red";
+		}
+	</script>
+</body>
+</html>

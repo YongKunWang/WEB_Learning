@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27_设置和获取文本框的值</title>
+</head>
+<body>
+	<input type="button" value="获取文本框的值" id="btn1">
+	<br>
+	<input type="button" value="设置文本框的值" id="btn2">
+	<br>
+	<input type="text" value="请输入搜索内容" id="text1">
+	<br>
+
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		my$('btn1').onclick = function () {
+			alert(document.getElementById('text1').value);
+		}
+		my$('btn2').onclick = function () {
+			document.getElementById('text1').value = "设置好了...";
+		}
+	</script>
+</body>
+</html>

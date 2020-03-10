@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>img标签的操作</title>
+</head>
+<body>
+	<input type="button" value="操作img标签" id="btn">
+	<img src="" alt="" id="im">
+	<script>
+		/**
+		 * 注意：
+		 * document.getElementById('btn');
+		 * 返回对象元素
+		 * document.getElementsByTagName
+		 * 返回数组元素，数组里面是对象
+		 *
+		 * 注意链式对象 document是文档的根部
+		 */
+		var btnObj = document.getElementById('btn');
+		btnObj.onclick = function () {
+			/**
+			 * 两种方法：
+			 * 	方法1:使用id属性
+			 * 	方法2：使用标签名称
+			 * 
+			 */
+			// var imObj = document.getElementById('im');
+			// imObj.src = "../images/1.jpg";
+			// imObj.alt = "这是一个美女";
+			// imObj.title = "图片：美女";
+			// imObj.width = "128";
+			// imObj.height = "80";
+			// 
+			var imObj = document.getElementsByTagName("img");
+			imObj[0].src = "../images/1.jpg";
+			imObj[0].alt = "这是一个美女";
+			imObj[0].title = "图片：美女";
+			imObj[0].width = "128";
+			imObj[0].height = "80";
+		}
+
+	</script>
+</body>
+</html>

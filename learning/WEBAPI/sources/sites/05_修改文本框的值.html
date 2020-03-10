@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改文本框的值</title>
+</head>
+<body>
+	<input type="button" value="修改文本框的值" id="btn1"> <br />
+	<input type="text" value=" "><br />
+	<input type="text" value=" "><br />
+	<input type="text" value=" "><br />
+	<input type="text" value=" "><br />
+	<input type="text" value=" "><br />
+
+	<script>
+		var btn1Obj = document.getElementById('btn1');
+		btn1Obj.onclick = function () {
+			var textObj = document.getElementsByTagName('input');
+			for(var i = 0; i < textObj.length; i ++){
+				if(textObj[i].type == "text"){
+					textObj[i].value = "我修改了文本框的值";
+				}
+				
+			}
+		}
+
+	</script>
+</body>
+</html>

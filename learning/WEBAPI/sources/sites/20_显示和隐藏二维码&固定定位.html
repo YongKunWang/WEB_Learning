@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示和隐藏二维码&固定定位</title>
+	<style>
+	/*
+		此时使用了精灵图的样式
+	 */
+		.nodeFather {
+			position: fixed;
+			right: 10px;
+			top: 40%;
+		}
+		.nodeFather a {
+
+			width: 50px;
+			height: 50px;
+			background:  url(../images/bgs.png) no-repeat -159px -51px;
+			display: block;
+		}
+		.erweima {
+			position: absolute;
+			top: 0;
+			right: 55px;
+		}
+		.show {
+			display: block;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="nodeFather" id="node_small">
+		<a href="#"></a>
+		<div class="erweima hide" id="er">
+			<img src="../images/456.png" alt="">
+		</div>
+	</div>
+	<script>
+		function my$(id) {
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		my$('node_small').getElementsByTagName('a')[0].onmouseover = function () {
+			console.log('over');
+			my$('er').className = "erweima show";
+		}
+
+		my$('node_small').getElementsByTagName('a')[0].onmouseout = function () {
+			console.log('out');
+			my$('er').className = "erweima hide";
+		}
+
+	</script>
+</body>
+</html>

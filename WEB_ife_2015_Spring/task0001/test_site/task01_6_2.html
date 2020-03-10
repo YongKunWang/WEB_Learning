@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div块的居中</title>
+	<style>
+	/*必须给定宽度*/
+	/*父相子绝*/
+		.father {
+			position: relative;
+		}
+		div {
+			background-color: red;
+			width: 960px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left: -480px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

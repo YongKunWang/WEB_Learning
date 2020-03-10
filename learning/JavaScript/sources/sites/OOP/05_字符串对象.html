@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串对象</title>
+	<script>
+		/*
+			1. String 是一个对象
+			2. 字符串可以看做是字符的组成部分，但是JS中没有字符这一类型
+			3. JS中的字符串 可以使用单引号，也可以使用双引号
+			4. 因为字符串可以看做是数组，所以可以通过for循环来进行遍历
+			5. 字符串特性：不可变性，字符串的值是不可以被改变的
+			6. 字符串的值看起来被改变了，那是因为指向改变了，并不是真的值改变了
+		 */
+		var str = "Hello";
+		str = "World!";
+		console.log(str);
+		//上述代码的指向改变了！！
+		for(var i = 0; i <str.lenght; i++)
+			console.log(str[i]);
+		str[1] = "W";
+		console.log(str);
+		//上述代码表明，字符串的不可变性！！
+	</script>
+	<script>
+		/*字符串方法*/
+		/*
+			实例方法：必须通过new方法来创建对象来调用方法
+			静态方法：直接通过大写的构造函数调用的方法
+			
+		 */
+		var str1 = "Hello World!";
+		console.log(str1.lenght);
+		console.log(str1.charAt(1));
+
+
+	</script>
+	
+	<script>
+		/*字符串案例*/
+		//1.
+		var str = "我爱最帅的杨哥,太帅了";
+		var key = "杨哥";
+		var index = str.indexOf(key);
+		console.log("index : " + index);
+		str = str.substr(index,2);
+		console.log(str); //杨哥
+	</script>
+	<script>
+		//2.
+		var str2 = "hello wod odd ott fbo nhyo";
+		var index = 0;
+		int key = "o";
+		while((index = str2.indexOf(key,index))!= -1){
+			console.log(index);
+			index += key.length;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html lang="zh-CH">
+	<head>
+		<meta charset="UTF-8">
+		<title>变量类型</title>
+		<script>
+			//null 表示空指针对象
+			//表明声明一个字符串对象的引用，但是指向null
+			//也就是说还没有指向任何内容
+			var nul = null;
+			console.log(typeof nul);
+			console.log(String(nul));
+			//表示声明一个字符串类型的引用，其值为""空字符串
+			//这个str引用指向的是空字符串的内存空间
+			var str = '';
+			console.log(typeof str);
+
+			var num2;
+			console.log(isNaN(num2+3)); //true
+
+			//隐式的类型转换
+			var str3 = '5';
+			var str4 = str3 - 3;
+			console.log(typeof str4)
+
+			var zx1 = parseInt(3.14);
+			console.log(zx1);
+			zx1 = parseFloat(3.14);
+			console.log(zx1);
+			zx1 = Boolean(3.14);
+			console.log(zx1);
+		</script>	
+	</head>
+</html> 

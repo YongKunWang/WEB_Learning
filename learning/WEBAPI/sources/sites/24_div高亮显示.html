@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div高亮显示</title>
+	<style>
+		div {
+			width: 200px;
+			height: 150px;
+			margin: 30px;
+			background-color: red;
+			border: 5px solid red;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<script>
+		var divObjs = document.getElementsByTagName('div');
+		for(var i = 0; i < divObjs.length; i ++){
+			divObjs[i].onmouseover = function () {
+				this.style.border = "5px solid green";
+			}
+			divObjs[i].onmouseout = function () {
+				this.style.border = "";
+			}
+		}
+	</script>
+</body>
+</html>

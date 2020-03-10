@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>26_判断密码长度</title>
+</head>
+<body>
+	<input type="text" value="判断密码长度" id="text1">
+	<script>
+		document.getElementById('text1').onfocus = function () {
+			if(this.value == "判断密码长度"){
+				this.value = '';
+			}
+		}
+		document.getElementById('text1').onblur = function () {
+			if(this.value.length >= 6 && this.value.length <= 10){
+				this.style.backgroundColor = "red";
+			}
+			else{
+				this.style.backgroundColor = "green"; 
+			}
+		}
+	</script>
+</body>
+</html>

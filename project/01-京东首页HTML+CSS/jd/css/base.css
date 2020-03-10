@@ -1,0 +1,100 @@
+/*
+	版心：
+	这里说的版心是指在中间部分进行布局
+
+ */
+.w {
+	width: 1190px;
+	margin: auto;
+}
+.fr {
+	float: right;
+}
+.fl {
+	float: left;
+}
+li {
+	list-style: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+/*引入样式图标*/
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?7kkyc2');
+	src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+		url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+		url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*京东 顶部 start*/
+/*块状元素直接给高度，宽度为100%*/
+.J_event {
+	/*height: 80px;*/
+	background-color: #000;
+}
+/*a为行内元素 不能设置宽高，需要进行转化*/
+/*  使用背景图片更为合适！！
+	a元素必须给定高度，因为使用的是图片背景
+	此时可以进行优化父级元素的高度属性！
+	还有就是子元素会撑开父级元素，
+	父级元素高度为最高的子元素的高度
+	此时可以将父级元素的高度属性去掉
+	使用a标签的高度去撑开父级元素！
+*/
+.J_event a {
+	display: block;
+	height: 80px;
+	background: url(../images/top.jpg) no-repeat;
+	position: relative;
+}
+/* 
+	字体图标一般使用i标签来进行包裹
+	进行定位时：子绝父相
+	子元素是相对于父元素进行定位的
+*/
+.J_event a i {
+	font-family: "icomoon";
+	position: absolute;
+	top: 0;
+	right: 5px;
+	font-style: normal;
+	background-color: rgb(0, 0, 0, .5);
+	color: #fff;
+	font-size: 8px;
+	text-align: center;
+}
+
+/*京东 顶部 end*/
+
+.shortcut {
+	height: 30px;
+	line-height: 30px;
+	background-color: #E3E4E5;
+	color: #9D9D9D;
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 12px;
+}
+.shortcut a {
+	color: #9D9D9D;
+	font-size: 12px;
+	text-decoration: none;
+}
+.shortcut .pos {
+	font-family: "icomoon";
+	font-style: normal;
+	font-size: 14px;
+	color: #f10215;
+}
+.shortcut .fl li {
+	margin-left: 200px;
+}
+
+.shortcut .fr li {
+	float: left;
+}

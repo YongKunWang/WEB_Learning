@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>认识Dom</title>
+	<script>
+		function f1() {
+			alert('第二版本的JS代码结构...');
+		}
+	</script>
+	<!-- 
+		出现这种错误：
+			 Uncaught TypeError: Cannot set property 'onclick' of null
+			主要是因为JS代码的放置位置的不正确性！
+			HTML文档是从上向下顺序执行的，执行到JS代码的时候，不理解'btn1'是什么意思
+			解决方法：将JS代码放置在body的最后部分！！
+	 -->
+</head>
+<body>
+	<!-- 第一版本 -->
+	<input type="button" value="第一版本" onclick="alert('第一版本的JS代码...')"/>
+	<!-- 第二版本的JS代码结构：未实现完全的分离 -->
+	<input type="button" value="第二版本" onclick="f1()" />
+	<!-- 第三版本的JS代码结构：开始分离JS和HTML，容易函数重名 -->
+	<!-- 使用在HTML文档中id值唯一的特性 -->
+	<input type="button" value="第三版本" id="btn1" />
+	<!-- 第四版本的JS代码结构：匿名函数的使用 -->
+	<input type="button" value="第四版本" id="btn2" />
+	
+	<script>
+		function f2() {
+			alert('第三版本的JS代码结构：开始分离JS和HTML');
+		}
+		var btn1Obj = document.getElementById("btn1");
+		btn1Obj.onclick = f2;
+	</script>
+	<script>
+		var btn2Obj = document.getElementById('btn2');
+		btn2Obj.onclick = function () {
+			alert('第四版本的JS代码结构：匿名函数的使用');
+		}
+	</script>
+
+
+</body>
+</html>

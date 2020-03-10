@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三列布局：左侧和中间固定 右侧自适应</title>
+	<style>
+		.outer {
+			width: 100%;
+			background-color: yellow;
+			position: relative;
+		}
+		.left {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			
+		}
+		.middle {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			position: absolute;
+			left: 200px;
+			top: 0;
+			bottom: 0;
+		}
+		.right {
+			height: 200px;
+			background-color: blue;
+			position: absolute;
+			left: 400px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		/*
+			浮动
+			定位：子绝父相的应用
+
+		 */
+		
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="left"></div>
+		<div class="middle"></div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>

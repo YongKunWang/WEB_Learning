@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟搜索框</title>
+</head>
+<body>
+	<input type="text" value="请输入搜索内容" id="t1">
+	<script>
+		document.getElementById('t1').onfocus = function () {
+			if(this.value == "请输入搜索内容"){
+				this.value = '';
+				this.style.color = 'black';
+			}
+		}
+		document.getElementById('t1').onblur = function () {
+			if(this.value == ""){
+				this.value = '请输入搜索内容';
+				this.style.color = 'grey';
+			}
+			if(this.value.length == 0){
+				this.value = '请输入搜索内容';
+				this.style.color = 'grey';
+			}
+		}
+		
+	</script>
+</body>
+</html>

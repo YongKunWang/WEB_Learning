@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21_根据属性值name来进行修改内容</title>
+	
+</head>
+	<input type="button" value="根据属性值name来进行修改内容" id="btn1"> <br>
+	<input type="text" value="你好帅..." name="name2"> <br>
+	<input type="text" value="你好帅..." name="name1"> <br>
+	<input type="text" value="你好帅..." name="name3"> <br>
+	<input type="text" value="你好帅..." name="name2"> <br>
+	<input type="text" value="你好帅..." name="name1"> <br>
+	<input type="text" value="你好帅..." name="name3"> <br>
+	<input type="text" value="你好帅..." name="name2"> <br>
+
+	<script>
+		document.getElementById('btn1').onclick = function () {
+			var nameObjs = document.getElementsByName('name1');
+			console.log(nameObjs.length);
+			for(var i = 0; i < nameObjs.length; i ++){
+				
+				nameObjs[i].value = "坏了！我变帅了..."
+			}
+		}
+		
+	</script>
+<body>
+</body>
+</html>

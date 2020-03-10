@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改按钮的自身属性</title>
+</head>
+<body>
+	<!-- 使用this从来访问本类对象 -->
+	<input type="button" value="未点击" id="btn1">
+	<script>
+		var btn1Obj = document.getElementById('btn1');
+		btn1Obj.onclick = function () {
+			this.value = "以点击";
+			this.type = "text";
+			this.id = "btn2";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerText和textContent的区分</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			border: 2px dashed red;
+		}
+	
+	</style>
+</head>
+<body>
+	<input type="button" value="设置值" id="btn1">
+	<input type="button" value="获取值" id="btn2">
+	<div id="dv">你好，请设置我吧！！</div>
+	
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		function setInnerText(element, text){
+			if(typeof element.textContent == "undefined"){
+				element.innerText = text;
+			}
+			else {
+				element.textContent = text;
+			}
+		}
+
+		function getInnerText(element){
+			if(typeof element.textContent == "undefined"){
+				return element.textContent;
+			}else {
+				return element.innerText;
+			}
+		}
+
+	</script>
+
+	<script>
+
+		my$('btn1').onclick = function () {
+			setInnerText(my$('dv'),"This is a div标签");
+		};
+
+		my$('btn2').onclick = function () {
+			alert(getInnerText(my$('dv')));
+		};
+	</script>
+</body>
+</html>

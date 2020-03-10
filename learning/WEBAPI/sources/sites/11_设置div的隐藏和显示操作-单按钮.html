@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置div的隐藏和显示操作-单按钮</title>
+	<style>
+	.div1 {
+		width: 300px;
+		height: 300px;
+		background-color: red;
+	}
+
+	.div2 {
+		width: 500px;
+		height: 500px;
+		background-color: pink;
+	}
+		
+	</style>
+</head>
+<body>
+	<input type="button" value="隐藏" id="btn1">
+	<div class="div1" id="d1"></div>
+	<!-- 行内块元素 -->
+	<input type="button" value="修改div属性" id="btn2">
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	
+	<script>
+		my$('btn1').onclick = function () {
+			if(this.value == "隐藏"){
+				my$('d1').style.display = "none";
+				this.value = "显示";
+			}
+			else if(this.value == "显示"){
+				my$('d1').style.display = "block";
+				this.value = "隐藏";
+			}
+			
+		}
+
+	</script>
+
+	<script>
+		//在js代码中DOM操作的时候,设置元素的类样式,不用class关键字,应该使用,className
+		my$('btn2').onclick = function () {
+			my$('d1').className = "div2";
+		}
+	</script>
+</body>
+</html>

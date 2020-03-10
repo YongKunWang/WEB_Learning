@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改p标签的内容</title>
+</head>
+<body>
+	<input type="button" value="修改第一个p标签" id="btn1" />
+	<input type="button" value="群改p标签" id="btn2">
+
+	<div id="div1">
+		<p id="p1">我是谁？ 我是p标签啊，来修改我啊！！</p>
+		<p>我是谁？ 我是p标签啊，来修改我啊！！</p>
+		<p>我是谁？ 我是p标签啊，来修改我啊！！</p>
+		<p>我是谁？ 我是p标签啊，来修改我啊！！</p>
+		<p>我是谁？ 我是p标签啊，来修改我啊！！</p>
+
+	</div>
+	<script>
+		var btn1Obj = document.getElementById('btn1');
+		btn1Obj.onclick = function () {
+			var p1Obj = document.getElementById('p1');
+			p1Obj.innerText = "小样，改了你又怎么样！，你打我呀！！！";
+		}
+
+		var btn2Obj = document.getElementById('btn2');
+		btn2Obj.onclick = function () {
+			//这是一个链式寻找目标
+			//好像前面的必须是通过id属性来链接
+			var pObj = document.getElementById('div1').getElementsByTagName('p');
+			console.log(pObj.length);
+			for(var i = 1; i < pObj.length; i ++){
+				pObj[i].innerText = "小样，改了你又怎么样！，你打我呀！！！";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
